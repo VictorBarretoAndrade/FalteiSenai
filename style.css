@@ -17,22 +17,12 @@ body {
   text-align: center;
 }
 
-/* 🔹 Logo */
-.logo {
-  width: 280px;        /* aumenta a largura */
-  height: 280px;       /* aumenta a altura */
-  border-radius: 50%;  /* mantém formato redondo */
-  object-fit: cover;   /* garante que a imagem preencha sem distorcer */
-  margin-bottom: 10px;
-}
-
-/* 🔹 Título */
 h1 {
   color: #333;
   margin-bottom: 15px;
 }
 
-/* 🔹 Legenda */
+/* 🔹 Estilo da legenda */
 .legenda {
   background-color: #f9fafb;
   border-left: 4px solid #007bff;
@@ -91,7 +81,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* 🔹 Resultado */
+/* 🔹 Mensagem de resultado */
 #resultado {
   margin-top: 20px;
   font-weight: bold;
