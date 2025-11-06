@@ -19,8 +19,8 @@ body {
 
 /* 🔹 Logo */
 .logo {
-  width: 180px;        /* aumenta a largura */
-  height: 180px;       /* aumenta a altura */
+  width: 280px;        /* aumenta a largura */
+  height: 280px;       /* aumenta a altura */
   border-radius: 50%;  /* mantém formato redondo */
   object-fit: cover;   /* garante que a imagem preencha sem distorcer */
   margin-bottom: 10px;
