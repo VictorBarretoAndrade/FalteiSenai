@@ -8,13 +8,16 @@
 </head>
 <body>
   <div class="container">
-    <h1>Faltei Senai</h1>
+
+    <!-- 🔹 Logo -->
+    <img src="logo.png" alt="Logo do site" class="logo" />
+
 
     <!-- 🔹 Legenda -->
     <div class="legenda">
       <h2>📘 Legenda de Carga Horária</h2>
       <ul>
-         <li>1 aula por semana → <b>30h</b></li>
+        <li>1 aula por semana → <b>30h</b></li>
         <li>2 aulas por semana → <b>60h</b></li>
         <li>3 aulas por semana → <b>90h</b></li>
         <li>Práticas Integradas → <b>90h presenciais</b></li>
@@ -25,7 +28,7 @@
     <label for="hsemestre">Horas da matéria:</label>
     <input type="number" id="hsemestre" placeholder="Ex: 60" />
 
-    <label for="faltasa">Dias faltados:</label>
+    <label for="faltasa">Faltas já dadas:</label>
     <input type="number" id="faltasa" placeholder="Ex: 2" />
 
     <button onclick="calcular()">Calcular</button>
