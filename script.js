@@ -9,12 +9,12 @@ function calcular() {
     return;
   }
 
-  // 🔹 Cálculos baseados no código C
+  // Lógica igual ao código em C
   const taula = (hsemestre * 60) / 50;  // total de aulas
   const faltasm = (taula * 0.25) / 2;   // máximo de faltas permitidas
   const faltasr = Math.floor(faltasm - faltasa); // faltas restantes
 
-  // 🔹 Lógica de mensagens
+  // Exibe resultados com cores e mensagens diferentes
   if (faltasr > 0) {
     resultado.innerHTML = `😎 Falte meu filho!<br>Você ainda pode faltar <b>${faltasr}</b> dias.`;
     resultado.className = "resultado-ok";
