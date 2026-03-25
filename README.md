@@ -1,6 +1,6 @@
 # 📊 FalteiSenai
 
-Projeto desenvolvido para visualizar e acompanhar faltas no SENAI de forma simples, rápida e acessível.
+Projeto desenvolvido para visualizar e acompanhar faltas no SENAI Cimatec de forma simples, rápida e acessível.
 
 ## 🚀 Acesse o projeto
 👉 https://victorbarretoandrade.github.io/FalteiSenai/
@@ -15,15 +15,6 @@ O objetivo é facilitar o acesso à informação e melhorar a organização acad
 
 ---
 
-## 🛠️ Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages (deploy)
-
----
-
 ## 📷 Funcionalidades
 
 - ✅ Interface simples e intuitiva  
@@ -31,6 +22,3 @@ O objetivo é facilitar o acesso à informação e melhorar a organização acad
 - ✅ Acesso rápido via navegador  
 - ✅ Responsivo (funciona em diferentes dispositivos)  
 
----
-
-## 📁 Estrutura do projeto
