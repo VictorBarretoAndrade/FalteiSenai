@@ -9,6 +9,12 @@ function calcular() {
     return;
   }
 
+  if (faltasa < 0) {
+    resultado.textContent = "Você é idiota? Pare de tentar ser diferentão, o número tá negativo :( ";
+    resultado.className = "resultado-erro";
+    return;
+  }
+
   // Lógica igual ao código em C
   const taula = (hsemestre * 60) / 50;  // total de aulas
   const faltasm = (taula * 0.25) / 2;   // máximo de faltas permitidas
