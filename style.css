@@ -32,6 +32,13 @@ h1 {
   font-size: 28px;
 }
 
+.intro {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
 /* 🔹 Estilo da legenda */
 .legenda {
   background-color: #fdf5e6;
@@ -123,6 +130,44 @@ button:active {
 #resultado:not(:empty) {
   display: block;
   animation: fadeIn 0.4s ease;
+}
+
+.info {
+  text-align: left;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px dashed #f0c27b;
+}
+
+.info h2 {
+  font-size: 16px;
+  color: #d84315;
+  margin: 14px 0 8px;
+}
+
+.info p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.info ul {
+  padding-left: 18px;
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.info li {
+  margin: 6px 0;
+}
+
+.footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
 }
 
 @keyframes fadeIn {
