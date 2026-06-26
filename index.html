@@ -13,27 +13,39 @@
   <div class="container">
     <h1>Faltei Senai</h1>
 
-    <p class="intro">
-      Cada dia faltado equivale a 2 aulas de 50 minutos cada.
-    </p>
+    <p class="intro">Coloque suas faltas do portal SENAI para saber quantos dias você ainda pode faltar.</p>
 
-    <!-- 🔹 Legenda -->
-    <div class="legenda">
-      <h2>📘 Legenda de Carga Horária</h2>
-      <ul>
-        <li>1 aula por semana → <b>30h</b></li>
-        <li>2 aulas por semana → <b>60h</b></li>
-        <li>3 aulas por semana → <b>90h</b></li>
-        <li>Práticas Integradas → <b>105h</b></li>
-      </ul>
+    <!-- Seletor de carga horária -->
+    <label>Aulas por semana:</label>
+    <div class="opcoes-grade">
+      <button class="opcao-btn" data-horas="30" onclick="selecionarHoras(this)">
+        <span class="opcao-label">1 aula/sem</span>
+        <span class="opcao-horas">30h</span>
+      </button>
+      <button class="opcao-btn" data-horas="60" onclick="selecionarHoras(this)">
+        <span class="opcao-label">2 aulas/sem</span>
+        <span class="opcao-horas">60h</span>
+      </button>
+      <button class="opcao-btn" data-horas="90" onclick="selecionarHoras(this)">
+        <span class="opcao-label">3 aulas/sem</span>
+        <span class="opcao-horas">90h</span>
+      </button>
+      <button class="opcao-btn" data-horas="105" onclick="selecionarHoras(this)">
+        <span class="opcao-label">Práticas Int.</span>
+        <span class="opcao-horas">105h</span>
+      </button>
     </div>
 
-    <!-- 🔹 Entradas -->
-    <label for="hsemestre">Horas da matéria:</label>
-    <input type="number" id="hsemestre" placeholder="Ex: 60" min="1" />
-
-    <label for="faltasa">Dias faltados:</label>
-    <input type="number" id="faltasa" placeholder="Ex: 2" min="0" />
+    <!-- Faltas -->
+    <div class="campo-faltas-header">
+      <label for="faltasa" id="label-faltasa">Número de faltas:</label>
+      <div class="toggle-mode">
+        <button id="btn-faltas" class="mode-btn active" onclick="setMode('faltas')">Faltas</button>
+        <button id="btn-dias" class="mode-btn" onclick="setMode('dias')">Dias</button>
+      </div>
+    </div>
+    <input type="number" id="faltasa" placeholder="Ex: 4" min="0" step="1" />
+    <small class="hint" id="hint-faltasa">Cole aqui exatamente o número que aparece no portal SENAI</small>
 
     <button onclick="calcular()">Calcular</button>
 
