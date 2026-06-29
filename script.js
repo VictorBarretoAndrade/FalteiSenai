@@ -1,21 +1,32 @@
 let modo = 'faltas';
 let horasSelecionadas = null;
+let faltasPorDia = 2;
 
 function selecionarHoras(btn) {
   document.querySelectorAll('.opcao-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   horasSelecionadas = Number(btn.dataset.horas);
+  faltasPorDia = Number(btn.dataset.faltasPorDia) || 2;
+  atualizarHint();
 
   const res = document.getElementById('resultado');
   res.textContent = '';
   res.className = '';
 }
 
+function atualizarHint() {
+  const hintEl = document.getElementById('hint-faltasa');
+  if (modo === 'faltas') {
+    hintEl.textContent = 'Cole aqui exatamente o número que aparece no portal SENAI';
+  } else {
+    hintEl.textContent = `1 dia faltado = ${faltasPorDia} faltas no portal`;
+  }
+}
+
 function setMode(m) {
   modo = m;
   const labelEl   = document.getElementById('label-faltasa');
   const inputEl   = document.getElementById('faltasa');
-  const hintEl    = document.getElementById('hint-faltasa');
   const btnFaltas = document.getElementById('btn-faltas');
   const btnDias   = document.getElementById('btn-dias');
 
@@ -23,17 +34,17 @@ function setMode(m) {
     labelEl.textContent = 'Número de faltas:';
     inputEl.placeholder = 'Ex: 4';
     inputEl.step        = '1';
-    hintEl.textContent  = 'Cole aqui exatamente o número que aparece no portal SENAI';
     btnFaltas.classList.add('active');
     btnDias.classList.remove('active');
   } else {
     labelEl.textContent = 'Dias faltados:';
     inputEl.placeholder = 'Ex: 2';
-    inputEl.step        = '0.5';
-    hintEl.textContent  = '1 dia faltado = 2 faltas no portal';
+    inputEl.step        = '1';
     btnFaltas.classList.remove('active');
     btnDias.classList.add('active');
   }
+
+  atualizarHint();
 
   const res = document.getElementById('resultado');
   res.textContent = '';
@@ -58,9 +69,9 @@ function calcular() {
 
   const taula           = (horasSelecionadas * 60) / 50;
   const maxFaltas       = taula * 0.25;
-  const faltasGastas    = modo === 'faltas' ? entrada : entrada * 2;
+  const faltasGastas    = modo === 'faltas' ? entrada : entrada * faltasPorDia;
   const faltasRestantes = maxFaltas - faltasGastas;
-  const diasRestantes   = Math.floor(faltasRestantes / 2);
+  const diasRestantes   = Math.floor(faltasRestantes / faltasPorDia);
 
   if (faltasRestantes > 0) {
     const diasStr   = `<b>${diasRestantes} dia${diasRestantes !== 1 ? 's' : ''}</b>`;
