@@ -62,6 +62,12 @@ h1 {
   transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
+.opcao-btn--full {
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: center;
+}
+
 .opcao-btn:hover {
   border-color: #fb8c00;
   background: #fff7ed;
