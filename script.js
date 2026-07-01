@@ -76,7 +76,7 @@ function calcular() {
   if (diasRestantes > 0) {
     const diasStr   = `<b>${diasRestantes} dia${diasRestantes !== 1 ? 's' : ''}</b>`;
     const faltasStr = `<b>${Math.floor(faltasRestantes)} falta${Math.floor(faltasRestantes) !== 1 ? 's' : ''}</b>`;
-    resultado.innerHTML = `😎 Falte meu filho!<br>Você ainda pode faltar ${diasStr}.<br><small class="resultado-detalhe">Isso equivale a ${faltasStr} no portal.</small>`;
+    resultado.innerHTML = `😎 Falte meu filho!<br>Você ainda pode faltar ${diasStr}.<br><small class="resultado-detalhe">Você ainda tem ${faltasStr} no portal.</small>`;
     resultado.className = "resultado-ok";
   } else if (faltasRestantes >= 0) {
     resultado.innerHTML = `⚠️ Não falte mais!<br>Você não tem mais faltas para gastar.`;
