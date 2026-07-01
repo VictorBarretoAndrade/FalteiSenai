@@ -18,6 +18,10 @@
     <!-- Seletor de carga horária -->
     <label>Aulas por semana:</label>
     <div class="opcoes-grade">
+      <button class="opcao-btn" data-horas="15" data-faltas-por-dia="2" onclick="selecionarHoras(this)">
+        <span class="opcao-label">Desafio/Trilha</span>
+        <span class="opcao-horas">15h</span>
+      </button>
       <button class="opcao-btn" data-horas="30" data-faltas-por-dia="2" onclick="selecionarHoras(this)">
         <span class="opcao-label">1 aula/sem</span>
         <span class="opcao-horas">30h</span>
@@ -34,7 +38,7 @@
         <span class="opcao-label">Práticas Int.</span>
         <span class="opcao-horas">105h</span>
       </button>
-      <button class="opcao-btn opcao-btn--full" data-horas="120" data-faltas-por-dia="4" onclick="selecionarHoras(this)">
+      <button class="opcao-btn" data-horas="120" data-faltas-por-dia="4" onclick="selecionarHoras(this)">
         <span class="opcao-label">2 aulas/sem de 3h:20</span>
         <span class="opcao-horas">120h</span>
       </button>
