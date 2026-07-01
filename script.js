@@ -73,12 +73,12 @@ function calcular() {
   const faltasRestantes = maxFaltas - faltasGastas;
   const diasRestantes   = Math.floor(faltasRestantes / faltasPorDia);
 
-  if (faltasRestantes > 0) {
+  if (diasRestantes > 0) {
     const diasStr   = `<b>${diasRestantes} dia${diasRestantes !== 1 ? 's' : ''}</b>`;
     const faltasStr = `<b>${Math.floor(faltasRestantes)} falta${Math.floor(faltasRestantes) !== 1 ? 's' : ''}</b>`;
     resultado.innerHTML = `😎 Falte meu filho!<br>Você ainda pode faltar ${diasStr}.<br><small class="resultado-detalhe">Isso equivale a ${faltasStr} no portal.</small>`;
     resultado.className = "resultado-ok";
-  } else if (faltasRestantes === 0) {
+  } else if (faltasRestantes >= 0) {
     resultado.innerHTML = `⚠️ Não falte mais!<br>Você não tem mais faltas para gastar.`;
     resultado.className = "resultado-alerta";
   } else {
